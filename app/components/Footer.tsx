@@ -1,5 +1,8 @@
+import { useLang } from '@/i18n/useLang';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useLang();
 
   return (
     <footer className="mt-16 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
@@ -7,29 +10,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">About</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">{t.footer.aboutTitle}</h3>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              MLN131: Marxism-Leninism Philosophy course materials and resources.
+              {t.footer.aboutDescription}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Resources</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">{t.footer.resourcesTitle}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Course Syllabus
+                  {t.footer.courseSyllabus}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Required Readings
+                  {t.footer.requiredReadings}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Assignments
+                  {t.footer.assignments}
                 </a>
               </li>
             </ul>
@@ -37,21 +40,21 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Support</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">{t.footer.supportTitle}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  FAQ
+                  {t.footer.faq}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Contact Instructor
+                  {t.footer.contactInstructor}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Student Forum
+                  {t.footer.studentForum}
                 </a>
               </li>
             </ul>
@@ -59,21 +62,21 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Legal</h3>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">{t.footer.legalTitle}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Privacy Policy
+                  {t.footer.privacyPolicy}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Terms of Use
+                  {t.footer.termsOfUse}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  Copyright
+                  {t.footer.copyright}
                 </a>
               </li>
             </ul>
@@ -83,7 +86,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-slate-200 dark:border-slate-700">
           <p className="text-center text-sm text-slate-600 dark:text-slate-400">
-            © {currentYear} MLN131 Course. All rights reserved.
+            © {currentYear} {t.footer.rightsReserved}
           </p>
         </div>
       </div>

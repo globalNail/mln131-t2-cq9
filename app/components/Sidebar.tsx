@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLang } from '@/i18n/useLang';
 
 interface NavItem {
   id: string;
@@ -10,14 +11,11 @@ interface NavItem {
   level: number;
 }
 
-const navItems: NavItem[] = [
-  { id: 'section-1', title: 'Marxism-Leninism on religion', href: '/chapter#section-1', level: 1 },
-  { id: 'section-2', title: 'Religion in Vietnam and current policies', href: '/chapter#section-2', level: 1 },
-];
-
 export default function Sidebar() {
   const pathname = usePathname();
   const isChapterPage = pathname === '/chapter';
+  const t = useLang();
+  const navItems: NavItem[] = [...t.sidebar.navItems];
 
   if (!isChapterPage) {
     return null;
@@ -27,7 +25,7 @@ export default function Sidebar() {
     <aside className="hidden lg:block w-64 bg-slate-50 dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
       <div className="p-6">
         <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-4">
-          Table of Contents
+          {t.sidebar.tableOfContents}
         </h3>
         <nav className="space-y-1">
           {navItems.map((item) => (
@@ -52,9 +50,9 @@ export default function Sidebar() {
       <div className="px-6 py-8 border-t border-slate-200 dark:border-slate-700">
         <div className="mb-2 flex items-center justify-between">
           <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Reading Progress
+            {t.sidebar.readingProgress}
           </h3>
-          <span className="text-xs font-medium text-slate-600 dark:text-slate-400">45%</span>
+          <span className="text-xs font-medium text-slate-600 dark:text-slate-400">{t.sidebar.readingProgressPercent}</span>
         </div>
         <div className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
           <div className="h-full w-[45%] bg-slate-900 dark:bg-white rounded-full transition-all duration-500"></div>
