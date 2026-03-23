@@ -1,3 +1,5 @@
+import { useLang } from '@/i18n/useLang';
+
 interface SectionCardProps {
   id: string;
   titleVi: string;
@@ -15,6 +17,8 @@ export default function SectionCard({
   reading,
   references,
 }: SectionCardProps) {
+  const t = useLang();
+
   return (
     <article
       id={id}
@@ -33,7 +37,7 @@ export default function SectionCard({
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-6 bg-slate-900 dark:bg-white rounded-sm"></div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
-              Assignment
+              {t.sectionCard.assignment}
             </h3>
           </div>
           <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-500 px-4 py-3 rounded-r">
@@ -46,7 +50,7 @@ export default function SectionCard({
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-6 bg-slate-900 dark:bg-white rounded-sm"></div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
-              Reading
+              {t.sectionCard.reading}
             </h3>
           </div>
           <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-400 dark:border-amber-500 px-4 py-3 rounded-r">
@@ -59,7 +63,7 @@ export default function SectionCard({
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-6 bg-slate-900 dark:bg-white rounded-sm"></div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
-              References
+              {t.sectionCard.references}
             </h3>
           </div>
           <ul className="space-y-2">
@@ -79,10 +83,10 @@ export default function SectionCard({
       {/* Footer */}
       <div className="px-6 py-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
         <span className="text-xs text-slate-500 dark:text-slate-400">
-          Section {id.split('-')[1]}
+          {t.common.sectionLabel} {id.split('-')[1]}
         </span>
         <button className="text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
-          Share →
+          {t.sectionCard.share}
         </button>
       </div>
     </article>

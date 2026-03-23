@@ -2,19 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useLang } from '@/i18n/useLang';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-  };
+  const t = useLang();
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 shadow-sm">
@@ -36,21 +28,31 @@ export default function Header() {
               href="/"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
             >
-              Home
+              {t.header.home}
             </Link>
             <Link
               href="/chapter"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
             >
-              Chapter 6
+              {t.header.chapter6}
             </Link>
             <a
               href="#"
               className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
             >
-              Syllabus
+              {t.header.syllabus}
             </a>
           </div>
+
+          <button
+            type="button"
+            className="md:hidden rounded-md border border-slate-300 dark:border-slate-600 px-2 py-1 text-slate-700 dark:text-slate-200"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={t.header.toggleMenuAria}
+          >
+            {mobileMenuOpen ? t.header.close : t.header.menu}
+          </button>
 
         </div>
 
@@ -61,19 +63,19 @@ export default function Header() {
               href="/"
               className="block py-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
             >
-              Home
+              {t.header.home}
             </Link>
             <Link
               href="/chapter"
               className="block py-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
             >
-              Chapter 6
+              {t.header.chapter6}
             </Link>
             <a
               href="#"
               className="block py-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
             >
-              Syllabus
+              {t.header.syllabus}
             </a>
           </div>
         )}

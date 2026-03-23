@@ -1,3 +1,5 @@
+import { useLang } from '@/i18n/useLang';
+
 interface BreadcrumbItem {
   label: string;
   href?: string;
@@ -8,8 +10,10 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
+  const t = useLang();
+
   return (
-    <nav className="flex items-center gap-2 mb-6 text-sm" aria-label="Breadcrumb">
+    <nav className="flex items-center gap-2 mb-6 text-sm" aria-label={t.breadcrumb.ariaLabel}>
       {items.map((item, index) => (
         <div key={index} className="flex items-center gap-2">
           {index > 0 && (
