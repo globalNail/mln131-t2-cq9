@@ -8,7 +8,7 @@ export default function Conclusion() {
   const t = useLang();
 
   return (
-    <section id={SECTION_IDS.conclusion} className="site-shell py-14 md:py-24">
+    <section id={SECTION_IDS.conclusion} className="site-shell scroll-mt-20 py-14 md:py-24">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}

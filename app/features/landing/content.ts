@@ -7,13 +7,42 @@ import type {
 } from "./types";
 import { vi } from "@/i18n/vi";
 
+export type LandingSectionNavItem = {
+    id: string;
+    label: string;
+};
+
 export const SECTION_IDS = {
-  misconceptions: "misconceptions",
-  theory: "theory",
-  policy: "vietnam-policy",
-  explanation: "explanation",
-  conclusion: "conclusion",
-  quiz: "quiz",
+    hero: "hero",
+    misconceptions: "misconceptions",
+    theory: "theory",
+    policy: "policy",
+    explanation: "explanation",
+    conclusion: "conclusion",
+    quiz: "quiz",
+    aiReport: "ai-report",
+} as const;
+
+export const LANDING_SECTIONS: LandingSectionNavItem[] = [
+    // { id: SECTION_IDS.hero, label: "Trang chủ" },
+    { id: SECTION_IDS.misconceptions, label: "Hiểu lầm" },
+    { id: SECTION_IDS.theory, label: "Lý thuyết" },
+    { id: SECTION_IDS.policy, label: "Chính sách" },
+    { id: SECTION_IDS.explanation, label: "Giải thích" },
+    { id: SECTION_IDS.conclusion, label: "Kết luận" },
+    { id: SECTION_IDS.quiz, label: "Trắc nghiệm" },
+    { id: SECTION_IDS.aiReport, label: "Báo cáo AI" },
+];
+
+export const LANDING_SECTION_IMAGES = {
+    hero: {
+        src: "/hero.jpg",
+        alt: "Minh hoa khong gian suy tu va cau hoi triet hoc",
+    },
+    theory: {
+        src: "/section-2.jpg",
+        alt: "Minh hoa cau truc tri thuc va phan tich ly luan",
+    },
 } as const;
 
 export const HERO_FEEDBACK = {
