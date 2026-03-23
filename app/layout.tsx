@@ -16,6 +16,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: vi.metadata.rootTitle,
   description: vi.metadata.rootDescription,
+  icons: {
+    icon: "/vietnam-flag-icon.svg",
+  },
 };
 
 export default function RootLayout({

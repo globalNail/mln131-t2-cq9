@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import Card from "../components/Card";
 import SectionWrapper from "../components/SectionWrapper";
-import { SECTION_IDS, THEORY_CONTENT } from "@/app/features/landing/content";
+import {
+  LANDING_SECTION_IMAGES,
+  SECTION_IDS,
+  THEORY_CONTENT,
+} from "@/app/features/landing/content";
 import { useLang } from "@/i18n/useLang";
 
 export default function Theory() {
@@ -32,6 +36,21 @@ export default function Theory() {
         </motion.blockquote>
 
         <div className="space-y-5">
+          <motion.figure
+            initial={{ opacity: 0, x: 18 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="group overflow-hidden rounded-3xl border border-[var(--line)]"
+          >
+            <img
+              src={LANDING_SECTION_IMAGES.theory.src}
+              alt={LANDING_SECTION_IMAGES.theory.alt}
+              className="h-64 w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </motion.figure>
+
           <Card title={t.theory.coreIdeasTitle}>
             <ul className="space-y-3 text-sm md:text-base">
               {THEORY_CONTENT.coreIdeas.map((idea) => (
