@@ -12,7 +12,7 @@ const AI_TOOLS = [
     ],
   },
   {
-    title: "GPT (ChatGPT)",
+    title: "GPT (ChatGPT) / Gemini",
     points: [
       "Hỗ trợ viết nội dung học tập.",
       "Tạo prompt phục vụ triển khai nội dung.",
