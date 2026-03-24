@@ -77,9 +77,9 @@ export const vi = {
     description:
       "Việt Nam không cấm tôn giáo. Nhà nước quản lý hoạt động tôn giáo bằng pháp luật, đồng thời bảo đảm quyền tín ngưỡng hợp pháp.",
     stats: [
-      { label: "Tôn giáo được công nhận", value: "16+" },
-      { label: "Tổ chức tôn giáo", value: "40+" },
-      { label: "Tín đồ (ước tính)", value: "27M+" },
+      { label: "Tôn giáo được công nhận (2023)", value: "16" },
+      { label: "Tổ chức tôn giáo (2023)", value: "43" },
+      { label: "Tín đồ (ước tính) (2023)", value: "27,7M" },
     ],
     directionTitle: "Định hướng chính sách",
     directionText:
@@ -133,10 +133,17 @@ export const vi = {
     scoreRetry: "Bạn làm khá rồi. Ôn lại từng phần và thử lại nhé.",
     questions: [
       {
-        question: "Trong chủ nghĩa xã hội, tôn giáo có thể bị xóa bỏ ngay lập tức không?",
+        question:
+          "Trong chủ nghĩa xã hội, tôn giáo có thể bị xóa bỏ ngay lập tức không?",
         options: [
-          { label: "Có, bằng các mệnh lệnh chính sách nghiêm ngặt", correct: false },
-          { label: "Không, cần thay đổi điều kiện xã hội theo thời gian", correct: true },
+          {
+            label: "Có, bằng các mệnh lệnh chính sách nghiêm ngặt",
+            correct: false,
+          },
+          {
+            label: "Không, cần thay đổi điều kiện xã hội theo thời gian",
+            correct: true,
+          },
           { label: "Chỉ ở khu vực nông thôn", correct: false },
         ],
       },
@@ -144,7 +151,10 @@ export const vi = {
         question: "Chủ nghĩa Mác - Lênin giải thích tôn giáo như thế nào?",
         options: [
           { label: "Chỉ là thói quen cá nhân ngẫu nhiên", correct: false },
-          { label: "Là sản phẩm của điều kiện lịch sử - xã hội", correct: true },
+          {
+            label: "Là sản phẩm của điều kiện lịch sử - xã hội",
+            correct: true,
+          },
           { label: "Là một tội danh pháp lý", correct: false },
         ],
       },
@@ -152,15 +162,24 @@ export const vi = {
         question: "Phát biểu nào phù hợp với chính sách của Việt Nam?",
         options: [
           { label: "Mọi tôn giáo đều bị cấm", correct: false },
-          { label: "Tôn giáo hoàn toàn tự do, không có pháp luật điều chỉnh", correct: false },
-          { label: "Hoạt động tôn giáo hợp pháp được công nhận và quản lý", correct: true },
+          {
+            label: "Tôn giáo hoàn toàn tự do, không có pháp luật điều chỉnh",
+            correct: false,
+          },
+          {
+            label: "Hoạt động tôn giáo hợp pháp được công nhận và quản lý",
+            correct: true,
+          },
         ],
       },
       {
         question: "Vì sao không thể xóa bỏ tôn giáo bằng ý chí chủ quan?",
         options: [
           { label: "Vì niềm tin có gốc rễ xã hội và tinh thần", correct: true },
-          { label: "Vì chính sách hoàn toàn không có tác động", correct: false },
+          {
+            label: "Vì chính sách hoàn toàn không có tác động",
+            correct: false,
+          },
           { label: "Vì tôn giáo không bao giờ thay đổi", correct: false },
         ],
       },
@@ -176,7 +195,8 @@ export const vi = {
   },
   footer: {
     aboutTitle: "Giới thiệu",
-    aboutDescription: "MLN131: Tài liệu và nguồn học tập môn Triết học Mác - Lênin.",
+    aboutDescription:
+      "MLN131: Tài liệu và nguồn học tập môn Triết học Mác - Lênin.",
     resourcesTitle: "Tài nguyên",
     courseSyllabus: "Đề cương môn học",
     requiredReadings: "Tài liệu bắt buộc",
@@ -252,7 +272,8 @@ export const vi = {
         titleVi: "Chủ nghĩa Mác - Lênin về tôn giáo",
         titleEn: "Góc nhìn lý luận",
         assignment: "(Nhiệm vụ: Thuyết trình và xây dựng sản phẩm sáng tạo)",
-        reading: "Đọc trước giáo trình Chủ nghĩa xã hội khoa học (2021) từ trang 223 đến 228.",
+        reading:
+          "Đọc trước giáo trình Chủ nghĩa xã hội khoa học (2021) từ trang 223 đến 228.",
         references: [
           "Giáo trình Triết học Mác - Lênin (2019)",
           "Giáo trình Triết học Mác - Lênin (2021)",
